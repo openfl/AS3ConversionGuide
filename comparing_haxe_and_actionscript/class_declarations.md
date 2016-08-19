@@ -4,7 +4,7 @@ You can see more similarities with ActionScript 2.0 when you consider how classe
 
 ### ActionScript 2.0
 
-```as2
+```haxe
 package example;
 
 class MyClass {
