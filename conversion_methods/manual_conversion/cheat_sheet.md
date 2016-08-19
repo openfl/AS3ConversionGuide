@@ -1,9 +1,5 @@
 # Cheat Sheet
 
-It is easy to transition to Haxe from ActionScript. In fact, the Haxe programming language was created by Flash developers. It started with MTASC, the open-source ActionScript 2 compiler, and evolved to the Haxe we love and know today. Haxe supports many advanced features ActionScript wishes it supported.
-
-This is a "cheat sheet" with a list of areas where Haxe and Actionscript 3 differ from one another. Places where the languages are the same have not been included. The column on the left is AS3, and the column on the right is Haxe.
-
 ## Basic Types
 
 ### ActionScript 3
