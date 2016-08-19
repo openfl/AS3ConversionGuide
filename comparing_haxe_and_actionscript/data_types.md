@@ -4,7 +4,7 @@ When typing a method or a variable, these are some of the core types in each lan
 
 ### ActionScript 2.0
 
-```as2
+```haxe
 String
 Number
 Boolean
