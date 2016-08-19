@@ -24,6 +24,7 @@ uint
 Boolean
 String
 void
+null
 ```
 
 ### Haxe
