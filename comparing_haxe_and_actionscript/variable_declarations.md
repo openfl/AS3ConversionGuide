@@ -10,13 +10,11 @@ package example;
 class MyClass {
     
     public static var a:String;
-    public var b:Number;
+    private var b:Number;
     private var c:Boolean;
     
     function MyClass () {
         
-        var hello = "World";
-        var answer:Number = 42;
         
     }
     
@@ -31,13 +29,11 @@ package example {
     public class MyClass {
         
         public static var a:String;
-        public var b:Number;
+        private var b:Number;
         private var c:Boolean;
         
         public function MyClass () {
             
-            var hello:String = "World";
-            var answer:Number = 42;
             
         }
         
@@ -55,37 +51,118 @@ class MyClass {
     
     public static var a:String;
     public var b:Float;
-    private var c:Bool;
+    var c:Bool;
     
     function new () {
         
-        var hello = "World";
-        var answer:Float = 42;
         
     }
     
 }
 ```
 
-In these samples, there is little difference in how variables are declared. The most important difference above is in how the local variable "hello" is declared.
+Declaring class properties is similar between ActionScript 2.0, ActionScript 3.0 and Haxe, but in Haxe the `private` declaration is optional. 
 
-### ActionScript 2.0 and Haxe
+## Local Variables
 
+ActionScript 1.0 and 2.0 were based on a dynamic virtual machine, which, while expressive, had serious performance limitations. ActionScript 3.0 introduced support for static types, which improves runtime performance considerably.
+
+### ActionScript 2.0
 ```haxe
 var hello = "World";
+var answer:Number = 42;
 ```
 
 ### ActionScript 3.0
 
 ```as3
 var hello:String = "World";
+var answer:int = 42;
 ```
 
-ActionScript 2.0 does not require type information, so `var hello = "World";` is valid code. However, because the result is dynamically typed, the code will execute more slowly than in other languages.
+### Haxe
 
-In ActionScript 3.0, the compiler supports static types, but it requires the user to always give the compiler this information. Although this is good for performance, it is not as good from a user perspective.
+```haxe
+var hello = "World";
+var answer:Int = 42;
+```
 
-Haxe supports _type inference_, which means that the compiler still uses static types, but it will _infer_ what that type is when you do not include that information. `var hello = "World";` means the compiler will infer that `hello` is a `String` type, and will not allow `hello` to be used differently.
+The unfortunate side-effect of static types in ActionScript 3.0 is that it forces it upon the user whenever a variable is declared.
 
-You must type `hello` as `Dynamic` in order to store different kinds of values in the same variable, but this is uncommon and bad practice for fast code.
+Haxe supports _type inference_, which allows the compiler to _infer_ a type when no type is declared. In the above sample, the `hello` variable will be statically typed as a `String`. This has the same performance benefits as ActionScript 3.0, but can lead to simpler code.
 
+## Constants
+
+### ActionScript 2.0
+
+_ActionScript 2.0 does not support constants._ 
+
+### Actionscript 3.0
+
+```as3
+public const gravity:Number = 9.8;
+```
+
+### Haxe
+
+```haxe
+public inline static var gravity = 9.8;
+```
+
+Haxe avoids the use of a `const` keyword, instead using the existing `static` and `inline` variables to define a constant.
+
+## Property Access
+
+### ActionScript 2.0
+
+_ActionScript 2.0 has limited property access features_
+
+### ActionScript 3.0
+
+```as3
+private var _customValue:int;
+private var _readOnly:String;
+
+public function get readOnly ():String {
+    
+    return _readOnly;
+    
+}
+
+public function get customProp ():int {
+    
+    return _customValue;
+    
+}
+
+public function set customProp (value:int):void {
+    
+    _customValue = value;
+       
+}
+```
+
+### Haxe
+
+```haxe
+public var customValue(get, set):Int;
+public var readOnly(default, null):String;
+
+private var _customValue:Int;
+
+private function get_customValue ():Int {
+    
+    return _customValue;
+    
+}
+
+private function set_customValue (value:Int):Int {
+    
+    return _customValue = value;
+    
+}
+```
+
+ActionScript 3.0 supports read-only variables through the use of a getter method, but Haxe has built-in support for controlling property access.
+
+Both languages allow the use of custom getter and setter functions, the syntax varies because many target environments do not support get/set properties, only "get\_" and "set\_" functions.
