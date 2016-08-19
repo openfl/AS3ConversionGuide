@@ -1,6 +1,6 @@
 # Variable Declarations
 
-Fundamentally, ActionScript is dynamic. In ActionScript 2.0, type declarations were optional hints to help developers write better code, but had no impact on the runtime performance of a project. Although ActionScript 3.0 (and AVM2) is still dynamic, ActionScript 3.0 does have some support for static types, which is expressed by _always_ requiring type information.
+## Class Properties
 
 ### ActionScript 2.0
 
