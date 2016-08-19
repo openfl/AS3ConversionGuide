@@ -5,4 +5,5 @@
     * [Data Types](comparing_haxe_and_actionscript/data_types.md)
     * [Class Declarations](comparing_haxe_and_actionscript/class_declarations.md)
     * [Variable Declarations](comparing_haxe_and_actionscript/variable_declarations.md)
+    * [Function Declarations](comparing_haxe_and_actionscript/function_declarations.md)
 
