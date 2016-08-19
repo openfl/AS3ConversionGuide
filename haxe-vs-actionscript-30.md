@@ -35,6 +35,7 @@ Float
 Int
 String
 Void
+null
 ```
 
 In ActionScript 2.0, core data types are all capitalized, but there is no distinct integer or unsigned integer type. ActionScript 3.0 introduced integer data types, but also introduced inconsistent capitalization between types.
