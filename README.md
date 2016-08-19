@@ -1,7 +1,5 @@
 # Introduction
 
-## Overview
-
 In 2001, the popularity of Flash and ActionScript continued to grow as artists and developers discovered the infinite possibilities of an expressive web platform.
 
 Unfortunately, the only method available for compiling Actionscript was to use the Macromedia Flash editor, or to use Macromedia's server-side Generator product. There were no free ActionScript compilers, particularly open-source ones, until Nicolas Cannasse and Motion-Twin created MTASC, the "Motion Twin ActionScript Compiler"
