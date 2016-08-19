@@ -2,6 +2,48 @@
 
 Since the Haxe programming language originated from an ActionScript 2.0 compiler, there are many similarities between the languages. In fact, a number of the minor differences between ActionScript 3.0 and Haxe can be explained if you understand this heritage.
 
+## Primitive Data Types
+
+### ActionScript 2.0
+
+```as2
+String
+Number
+Boolean
+Void
+null
+```
+
+### ActionScript 3.0
+
+```as3
+String
+Number
+int
+uint
+Boolean
+String
+void
+```
+
+### Haxe
+
+```haxe
+Bool
+Float
+Int
+String
+Void
+```
+
+In ActionScript 2.0, core data types are all capitalized, but there is no distinct integer or unsigned integer type. ActionScript 3.0 introduced integer data types, but also introduced inconsistent capitalization between types.
+
+Haxe continues the trend by enforcing 
+
+
+
+ActionScript 2.0 uses , the core data types 
+
 ## Creating a Class
 
 #### ActionScript 2.0
@@ -11,14 +53,8 @@ package example;
 
 class MyClass {
     
-    public var publicBoolean:Boolean;
-    private var privateString:String;
-    var number:Number;
-    
     function MyClass () {
         
-        var boolean = true;
-        var string:String = "Hello";
         
     }
 
@@ -32,14 +68,8 @@ package example {
     
     public class MyClass {
         
-        public var publicBoolean:Boolean;
-        private var privateString:String;
-        private var number:Number;
-        
         public function MyClass () {
             
-            var boolean:Boolean = true;
-            var string:String = "Hello";
             
         }
 
@@ -55,14 +85,8 @@ package example;
 
 class MyClass {
     
-    public var publicBoolean:Boolean;
-    private var privateString:String;
-    var number:Number;
-    
     function new () {
         
-        var boolean = true;
-        var string:String = "Hello";
         
     }
     
