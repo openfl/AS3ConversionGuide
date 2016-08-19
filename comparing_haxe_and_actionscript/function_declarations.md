@@ -41,7 +41,7 @@ public function sayHello (message) {
     
 }
 
-private inline function add (a:Float, b:Float) {
+inline function add (a:Float, b:Float) {
     
     return (a + b);
     
@@ -53,3 +53,5 @@ Similar to variable declarations, typing in ActionScript 2.0 is optional, while 
 It is normally recommended to type incoming arguments for functions in Haxe, but it is not required. The compiler will use type inference to choose a type if it is not declared.
 
 Unlike ActionScript, Haxe supports `inline` functions, which is like performing a copy-and-paste each time the function is called. This can improve performance at the cost of additional generated code.
+
+The `private` declaration is also optional in Haxe.
