@@ -1,4 +1,4 @@
-\# ActionScript 3.0 Conversion Guide
+ActionScript 3.0 Conversion Guide
 
 \#\# Overview
 
@@ -23,6 +23,4 @@ Flash has received a lot of negative press that fundamentally comes down to decl
 Without Flash Player, there is no ActionScript virtual machine. Especially in the web browser, choices are limited to V8, SpiderMonkey, Chakra or another JavaScript virtual machine. In Haxe, AVM2 and JavaScript are both fully supported. Using OpenFL, an open implementation of Flash APIs, it is possible to develop "Flash" content without using Flash Player at all.
 
 Beyond the browser, Flash Player is available in the form of Adobe AIR for desktop and mobile, but there are still limitations that prevent developers from creating Linux native applications, releasing for console platforms, or integrating with deeper features than are provided. OpenFL also includes support for native desktop and mobile publishing, and unofficially has been used in embedded devices, console platforms and single-board computers \\(such as the Raspberry Pi\\).
-
-
 
