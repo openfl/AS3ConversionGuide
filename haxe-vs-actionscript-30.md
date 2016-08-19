@@ -45,9 +45,9 @@ Haxe enforces consistent capitalization for types, and varies slightly from Acti
 
 ## Defining a Class
 
+You can see more similarities with ActionScript 2.0 when you consider how classes are defined:
 
-
-#### ActionScript 2.0
+### ActionScript 2.0
 
 ```as2
 package example;
@@ -62,7 +62,7 @@ class MyClass {
 }
 ```
 
-#### ActionScript 3.0
+### ActionScript 3.0
 
 ```as3
 package example {
@@ -79,7 +79,7 @@ package example {
 }
 ```
 
-#### Haxe
+### Haxe
 
 ```haxe
 package example;
@@ -93,6 +93,84 @@ class MyClass {
     
 }
 ```
+
+ActionScript 2.0 did not require package declarations, as packages themselves were optional. ActionScript 3.0 requires the use of classes, and requires that classes are organized into packages.
+
+Similar to ActionScript 3.0, Haxe also requires that class files are organized into matching files, but the `package` declaration is optional if the code is not organized in a subdirectory. Similar to ActionScript 2.0, declaring the class or the constructor as `public` is not needed, because these are implied.
+
+Haxe distinctly requires that class constructors are called `new` instead matching the class name.
+
+## Declaring Variables and Methods
+
+### ActionScript 2.0
+
+```as2
+package example;
+
+class MyClass {
+    
+    public var a:String;
+    private var b:Number;
+    var c:Boolean;
+    
+    function MyClass () {
+        
+        var hello = "World";
+        var answer:Number = 42;
+        
+    }
+    
+}
+```
+
+### ActionScript 3.0
+
+```as3
+package example {
+    
+    public class MyClass {
+        
+        public var a:String;
+        private var b:Number;
+        private var c:Boolean;
+        
+        public function MyClass () {
+            
+            var hello:String = "World";
+            var answer:Number = 42;
+            
+        }
+        
+    }
+    
+}
+```
+
+### Haxe
+
+```haxe
+package example;
+
+class MyClass {
+    
+    public var a:String;
+    private var b:Float;
+    var c:Bool;
+    
+    function new () {
+        
+        var hello = "World";
+        var answer:Float = 42;
+        
+    }
+    
+}
+```
+
+sadfasfasdf
+
+ActionScript 2.0 does not require packages, but making packages optional can make it difficult to find code. ActionScript 3.0 requires packages, and requires that each file matches the name of the primary class 
+
 
 ## Declaring a Package
 
