@@ -26,6 +26,8 @@ The first time you run AS3HX, the tool will generate a file called ".as3hx_confi
 
 Open this file in a text editor and you can change a number of different options for how AS3HX will process ActionScript 3.0 source and generate corresponding Haxe source.
 
+After changing the configuration file, try running the `as3hx` command again to compare the results.
+
 These are some of the options available
 
 ### `<indentChars value="    " />`
