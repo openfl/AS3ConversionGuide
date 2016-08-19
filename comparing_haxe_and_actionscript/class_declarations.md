@@ -1,4 +1,4 @@
-# Classes
+# Class Declarations
 
 You can see more similarities with ActionScript 2.0 when you consider how classes are defined:
 
