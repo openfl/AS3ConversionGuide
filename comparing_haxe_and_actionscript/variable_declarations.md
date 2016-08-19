@@ -11,7 +11,7 @@ class MyClass {
     
     public static var a:String;
     private var b:Number;
-    private var c:Boolean;
+    var c:Boolean;
     
     function MyClass () {
         
@@ -23,7 +23,7 @@ class MyClass {
 
 ### ActionScript 3.0
 
-```as3
+```ActionScript
 package example {
     
     public class MyClass {
@@ -61,7 +61,7 @@ class MyClass {
 }
 ```
 
-Declaring class properties is similar between ActionScript 2.0, ActionScript 3.0 and Haxe, but in Haxe the `private` declaration is optional. 
+Declaring class properties is similar between ActionScript 2.0, ActionScript 3.0 and Haxe, but in Haxe and ActionScript 2.0 the `private` declaration is optional. 
 
 ## Local Variables
 
@@ -75,7 +75,7 @@ var answer:Number = 42;
 
 ### ActionScript 3.0
 
-```as3
+```ActionScript
 var hello:String = "World";
 var answer:int = 42;
 ```
@@ -99,7 +99,7 @@ _ActionScript 2.0 does not support constants._
 
 ### Actionscript 3.0
 
-```as3
+```ActionScript
 public const gravity:Number = 9.8;
 ```
 
@@ -113,13 +113,34 @@ Haxe avoids the use of a `const` keyword, instead using the existing `static` an
 
 ## Property Access
 
-### ActionScript 2.0
+### ActionScript 2.0 and 3.0
 
-_ActionScript 2.0 has limited property access features_
+```haxe
+private var _customValue:Number;
+private var _readOnly:String;
+
+public function get readOnly ():String {
+    
+    return _readOnly;
+    
+}
+
+public function get customProp ():Number {
+    
+    return _customValue;
+    
+}
+
+public function set customProp (value:Number):Void {
+    
+    _customValue = value;
+    
+}
+```
 
 ### ActionScript 3.0
 
-```as3
+```ActionScript
 private var _customValue:int;
 private var _readOnly:String;
 
@@ -138,7 +159,7 @@ public function get customProp ():int {
 public function set customProp (value:int):void {
     
     _customValue = value;
-       
+    
 }
 ```
 
@@ -163,6 +184,6 @@ private function set_customValue (value:Int):Int {
 }
 ```
 
-ActionScript 3.0 supports read-only variables through the use of a getter method, but Haxe has built-in support for controlling property access.
+ActionScript 2.0 and 3.0 support read-only variables through the use of a getter method, but Haxe has built-in support for controlling property access, reducing boiler-plate code.
 
-Both languages allow the use of custom getter and setter functions, the syntax varies because many target environments do not support get/set properties, only "get\_" and "set\_" functions.
+All three languages allow the use of custom getter and setter functions, the syntax varies because many target environments do not support get/set properties, only "get\_" and "set\_" functions.

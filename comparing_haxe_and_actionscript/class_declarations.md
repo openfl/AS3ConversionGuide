@@ -19,7 +19,7 @@ class MyClass {
 
 ### ActionScript 3.0
 
-```as3
+```ActionScript
 package example {
     
     public class MyClass {

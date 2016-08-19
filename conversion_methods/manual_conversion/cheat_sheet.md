@@ -4,7 +4,7 @@
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 Boolean
 int
 Number
@@ -30,7 +30,7 @@ Array<String>
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 package com.example.myapplication {
  
 }
@@ -46,7 +46,7 @@ package com.example.myapplication;
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 public class MyClass {
  
    public function MyClass () {
@@ -74,7 +74,7 @@ class MyClass {
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 for (var i:uint = 0; i < 100; i++) {
  
 }
@@ -109,7 +109,7 @@ for (propertyName in fields) {
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 switch (value) {
  
    case 1:
@@ -141,7 +141,7 @@ switch (value) {
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 var hi = "Hello World";
  
 // type is Object
@@ -161,7 +161,7 @@ var hi = "Hello World";
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 var car:Car = vehicle as Car;
  
 var toString:String = String (10);
@@ -187,7 +187,7 @@ var toInteger = Std.int (10.1);
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 if (vehicle is Car) {
  
 }
@@ -214,7 +214,7 @@ name = Type.getClassName (type);
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 if (object == null) {
  
 }
@@ -236,7 +236,7 @@ if (object == null) {
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 var table:Object = new Object ();
 table["key"] = 100;
  
@@ -272,7 +272,7 @@ table.remove ("key");
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 function test (...params):void {
  
 }
@@ -294,7 +294,7 @@ Reflect.makeVarArgs (test) (1, 2, 3);
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 var foo = object["foo"];
  
 bar.apply (this, [ "hi" ]);
@@ -312,7 +312,7 @@ Reflect.callMethod (this, bar, [ "hi" ]);
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 private const gravity:Number = 9.8;
 ```
 
@@ -326,7 +326,7 @@ private inline static var gravity = 9.8;
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 function hello (msg:String):void {
  
 }
@@ -350,7 +350,7 @@ var type:String->Void = hello;
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 function get x ():Number {
  
    return _x;
@@ -386,7 +386,7 @@ function set_x (value:Float):Float {
 
 ### ActionScript 3
 
-```as3
+```ActionScript
 function get x ():Float {
  
    return _x;

@@ -14,7 +14,7 @@ Void
 
 ### ActionScript 3.0
 
-```as3
+```ActionScript
 String
 Number
 int

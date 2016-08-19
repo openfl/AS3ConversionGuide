@@ -18,7 +18,7 @@ private function add (a:Number, b:Number) {
 
 ### ActionScript 3.0
 
-```as3
+```ActionScript
 public function sayHello (message:String):void {
     
     trace (message);
