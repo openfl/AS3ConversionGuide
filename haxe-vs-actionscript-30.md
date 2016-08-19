@@ -2,7 +2,9 @@
 
 Since the Haxe programming language originated from an ActionScript 2.0 compiler, there are many similarities between the languages. In fact, a number of the minor differences between ActionScript 3.0 and Haxe can be explained if you understand this heritage.
 
-## Primitive Data Types
+## Core Data Types
+
+When typing a method or a variable, these are some of the core types in each language:
 
 ### ActionScript 2.0
 
@@ -10,8 +12,8 @@ Since the Haxe programming language originated from an ActionScript 2.0 compiler
 String
 Number
 Boolean
+Object
 Void
-null
 ```
 
 ### ActionScript 3.0
@@ -20,33 +22,30 @@ null
 String
 Number
 int
-uint
 Boolean
 String
+Object
 void
-null
 ```
 
 ### Haxe
 
 ```haxe
-Bool
+String
 Float
 Int
-String
+Bool
+Dynamic
 Void
-null
 ```
 
-In ActionScript 2.0, core data types are all capitalized, but there is no distinct integer or unsigned integer type. ActionScript 3.0 introduced integer data types, but also introduced inconsistent capitalization between types.
+ActionScript 2.0 is consistent in capitalizing these core types, but is missing some core types that are important to statically-typed language, such as distinguishing integers from floating point numbers. ActionScript 3.0 is more expressive, but uses a mixture of capitalized and uncapitalized names for core types, which is a bit confusing.
 
-Haxe continues the trend by enforcing 
+Haxe enforces consistent capitalization for types, and varies slightly from ActionScript in how some core types are named, more closely resembling other languages. `Float` and `Int` is arguably a better combination than `Number` and `int`. Haxe also uses `Bool` instead of `Boolean` (similar to C/C++) and uses `Dynamic` to describe a dynamic (untyped) value.
+
+## Defining a Class
 
 
-
-ActionScript 2.0 uses , the core data types 
-
-## Creating a Class
 
 #### ActionScript 2.0
 
