@@ -120,22 +120,22 @@ This might mean that you forgot a parenthesis in your code.
 
 ## Unexpected is
 
-You can replace “Foo is Bar” with “Std.is (Foo, Bar)”
+You can replace `Foo is Bar` with `Std.is (Foo, Bar)`
 
 ## Unexpected as
 
-There is more than one way to perform casting in Haxe. In order to perform an unsafe (but fast) cast between types, you can use the “cast” keyword with parenthesis, like “cast foo”.
+There is more than one way to perform casting in Haxe. In order to perform an unsafe (but fast) cast between types, you can use the `cast` keyword without parenthesis, like `cast foo`.
 
-In order to perform a safe cast, use parenthesis, like “cast (foo, Bar)”. This is similar to using Std.as in order to perform casting.
+In order to perform a safe cast, use parenthesis, like `cast (foo, Bar)`. This is similar to using `Std.as` in order to perform casting.
 
-You can use Std.int, Std.parseFloat, Std.parseInt and Std.string in order to convert between basic types.
+You can use `Std.int`, `Std.parseFloat`, `Std.parseInt` and `Std.string` in order to convert between basic types.
 
 ## Unexpected protected
 
-The Haxe language does not have a “protected” keyword, but the “private” scope acts like “protected” in other languages.
+The Haxe language does not have a `protected` keyword, but the `private` scope acts like `protected` in other languages.
 
 ## Unexpected *
 
-This may mean that you need Dynamic in place of * for a type, or it may be caused by a wild card import, which is not supported in Haxe.
+This may mean that you need `Dynamic` in place of `*` for a type, or it may be caused by a wild card import, which will only apply to a single level.
 
-A statement like “import flash.display.*;” can be replaced with “import flash.display.Sprite;”
+For example, `import flash.display.*;` would work, but `import flash.*;` would not.
