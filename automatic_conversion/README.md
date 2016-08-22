@@ -1,2 +1,2 @@
-# Conversion Methods
+# Automatic Conversion
 
