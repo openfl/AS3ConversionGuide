@@ -112,7 +112,7 @@ For example, `dynamic class Foo implements Bar` can be replaced with `class Foo 
 
 This probably means that a comma is missing.
 
-For example, replace “extends Foo implements Bar” with “extends Foo, implements Bar”
+For example, replace `extends Foo implements Bar` with `extends Foo implements Bar`
 
 ## Unexpected {
 
