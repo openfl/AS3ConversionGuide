@@ -6,6 +6,6 @@
 * [Automatic Conversion](automatic_conversion/README.md)
     * [AS3HX](automatic_conversion/as3hx/README.md)
 * Glossary
-    * Error Messages
+    * [Error Messages](glossary/error_messages.md)
     * [Cheat Sheet](glossary/cheat_sheet.md)
 
