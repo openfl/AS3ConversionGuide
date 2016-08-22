@@ -5,5 +5,7 @@
     * [Overview](comparing_haxe_and_actionscript/overview.md)
 * [Automatic Conversion](automatic_conversion/README.md)
     * [AS3HX](automatic_conversion/as3hx/README.md)
-* [Cheat Sheet](cheat_sheet.md)
+* Glossary
+    * Error Messages
+    * [Cheat Sheet](glossary/cheat_sheet.md)
 
