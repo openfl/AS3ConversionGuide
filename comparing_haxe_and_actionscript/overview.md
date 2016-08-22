@@ -144,16 +144,9 @@ However, Haxe does support access control using meta-data tags such as `@:allow`
 ```ActionScript
 package {
     
-    public namespace custom_namespace;
-    
-}
-```
-```ActionScript
-package {
-    
     public class Test {
         
-        custom_namespace static var hello:String = "Hello";
+        internal static var hello:String = "Hello";
         
     }
     
@@ -162,13 +155,11 @@ package {
 ```ActionScript
 package {
     
-    use namespace custom_namespace;
-    
     public class Test2 {
         
         public function Test2 () {
             
-            var msg:String = Test.custom_namespace::hello;
+            var msg:String = Test.hello;
             
         }
         
@@ -182,7 +173,7 @@ package {
 ```haxe
 class Test {
     
-    private static var hello = "Hello";
+    private static var hello:String = "Hello";
     
 }
 ```
@@ -201,4 +192,67 @@ public class Test2 {
 
 ## Type Inference
 
+Declaring the type for a variable is optional in ActionScript 2.0, but required when statically typing variables in ActionScript 3.0. This enables faster performance by knowing the type of a variable at compile-time.
 
+Haxe supports compiler type inference, a valuable feature that allows you to eliminate boiler-plate code, while enjoying the benefits of static typing. It is also possible to add type declarations similar to ActionScript.
+
+### ActionScript 3.0
+
+```ActionScript
+var hello:String = "World";
+var fruit:Array = [ "apple", "orange" ];
+```
+
+### Haxe
+
+```haxe
+var hello:String = "World";
+var fruit:Array<String> = [ "apple", "orange" ];
+```
+
+_or_
+
+```haxe
+var hello = "World";
+var fruit = [ "apple", "orange" ];
+```
+
+## Loops
+
+ActionScript has multiple kinds of loops. There `for ... in` loops, `for ... each` loops and `for` loops. Haxe simplifies this syntax to a single `for ... in` loop:
+
+### ActionScript 3.0
+
+```ActionScript
+for (var i:uint = 0; i < 10; i++) {
+    
+    trace (i);
+    
+}
+
+var array:Array = [ "a", "b", "c" ];
+
+for each (var value:String in array) {
+    
+    trace (value);
+    
+}
+```
+
+### Haxe
+
+```haxe
+for (i in 0...10) {
+    
+    trace (i);
+    
+}
+
+var array = [ "a", "b", "c" ];
+
+for (value in array) {
+    
+    trace (value);
+    
+}
+```
