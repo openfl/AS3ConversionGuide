@@ -55,7 +55,7 @@ b++;
 trace (a + b);
 ```
 
-...or using an inline function:
+...or using a function:
 
 ```haxe
 var a = 1;
@@ -64,6 +64,8 @@ trace (function () { a++; b++; return a + b; } ());
 ```
 
 ## Code Blocks
+
+
 
 ## Whitespace
 
