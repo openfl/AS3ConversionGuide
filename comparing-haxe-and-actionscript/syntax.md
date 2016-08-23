@@ -65,12 +65,85 @@ trace (function () { a++; b++; return a + b; } ());
 
 ## Code Blocks
 
+Code encased by curly braces (`{}`) are called a code block. The body of many portions of ActionScript and Haxe are grouped together using code blocks.
 
+```haxe
+public function hello ():String {
+    
+    return "World";
+    
+}
+```
+```haxe
+if (raining) {
+    
+    useUmbrella ();
+    
+}
+```
 
 ## Whitespace
 
+Spaces, tabs and line breaks are referred to as whitespace. Actionscript and Haxe both allow whitespace to make code easier to read.
+
+```haxe
+class Test {
+    
+    public function new () {
+        
+    }
+    
+}
+
+class Test2 { public function new() {} }
+```
+
 ## Comments
+
+Actionscript and Haxe both allow for single-line or multi-line comments. A comment will not be compiled, allowing the addition of helpful notes or as a method of quickly disabling code.
+
+```haxe
+// This is a single line comment
+
+/* This is
+   a multi-line
+   comment */
+```
 
 ## Literals
 
+A literal is a fixed value in your code, Haxe and ActionScript are similar in the types of literals you can use:
+
+```haxe
+100
+-2.1
+"hello"
+null
+true
+false
+```
+
+ActionScript has an `undefined` literal which is not used in Haxe. The following returns `undefined` in `ActionScript`, but is a compile error in Haxe:
+
+```haxe
+object = { a: "b", c: "d" };
+trace (object.e);
+```
+
+Instead, use the Haxe `Reflect` class to check if a field exists, or use static types.
+
+```haxe
+if (Reflect.hasField (object, "e")) {
+    
+    trace (Reflect.field (object, "e"));
+    
+}
+```
+
 ## Keywords
+
+ActionScript and Haxe share many keywords:
+
+|------|-----|-----|
+|`as`  |`if` | `a` |
+|------|-----|-----|
