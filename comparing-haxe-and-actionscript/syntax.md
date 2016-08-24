@@ -188,6 +188,24 @@ The Haxe programming language is designed to limit the number of keywords, so th
     public static inline var gravity = 9.8;
     ```
     
+ * `dynamic`
+    
+    ActionScript 3.0 supports a `dynamic` keyword when a class allows new fields at runtime.
+    
+    ```ActionScript
+    dynamic public class Test {
+        
+    }
+    ```
+    
+    Haxe allows for similar functionality by implementing the `Dynamic` type:
+    
+    ```haxe
+    class Test implements Dynamic {
+        
+    }
+    ```
+    
  * `each`
     
     ActionScript has separate "for in" or "for each in" loops, but in Haxe these are simplified to a single "for in" loop.
@@ -214,10 +232,24 @@ The Haxe programming language is designed to limit the number of keywords, so th
     }
     ```haxe
     
+ * `final`
+    
+    ActionScript uses the `final` keyword to specify a class that cannot be extended. Haxe supports the same, but it uses a `@:final` meta-data tag instead:
+    
+    ```haxe
+    @:final class Test {
+        
+    }
+    ```
+    
  * `finally`
     
     Haxe does not support `try/catch/finally` so cleanup logic must occur in a `catch`
 
+ * `include`
+    
+    Haxe does not support an `include` keyword, there are methods of replicating the same behavior using a custom macro, but in general, it is recommended that classes, typedefs, `using` and other techniques are implemented to share code within a project.
+    
  * `instanceof`
     
     The ActionScript 3.0 keyword, `instanceof`, can be replaced with `Std.is`
