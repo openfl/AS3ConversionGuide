@@ -347,4 +347,6 @@ Haxe also has additional keywords that are not defined in ActionScript:
 
 |    |    |    |
 |----|----|----|
-| `cast` | `
+| `cast` | `enum` | `extern` |
+| `inline` | `never` | `typedef` |
+| `untyped` | `using` | 
