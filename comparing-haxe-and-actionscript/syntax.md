@@ -142,8 +142,50 @@ if (Reflect.hasField (object, "e")) {
 
 ## Keywords
 
-ActionScript and Haxe share many keywords:
+ActionScript and Haxe share many reserved words and keywords:
 
-|------|-----|-----|
-|`as`  |`if` | `a` |
-|------|-----|-----|
+|    |    |    |
+|----|----|----|
+| `break` | `case` | `catch` |
+| `class` | `default` | `do` |
+| `else` | `extends` | `false` |
+| `for` | `function` | `if` |
+| `implements` | `import` | `in` |
+| `interface` | `new` | `null` |
+| `override` | `package` | `private` |
+| `public` | `return` | `static` |
+| `super` | `switch` | `this` |
+| `throw` | `true` | `try` |
+| `var` | `while` |
+
+The Haxe programming language is designed to limit the number of keywords, so there are a number of keywords which are in ActionScript 3.0 that are not keywords in Haxe:
+
+ * `as`
+
+    In ActionScript 3.0, `as` is used for casting. Adobe references `cast` as a "future" keyword that has not been implemented in the language.
+
+    ```ActionScript
+    var clip:MovieClip = event.currentTarget as MovieClip;
+    ```
+    
+    Haxe uses `cast` when casting between types, in order to perform a safe cast (which is slower, but throws an error if it is not possible), use parentheses:
+    
+    ```haxe
+    var clip = cast (event.currentTarget, MovieClip);
+    ```
+
+    ...otherwise, an unsafe cast occurs without parentheses and a second argument.
+    
+     ```haxe
+    var clip:MovieClip = cast event.currentTarget;
+     ``` 
+
+ * `const`
+    
+    Actionscript uses the `const` keyword to define a constant value. Because Haxe supports inlining, a `const` keyword is not necessary.
+    
+    ```haxe
+    public static inline var gravity = 9.8;
+    ```
+    
+ * `do`
