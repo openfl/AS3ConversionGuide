@@ -140,6 +140,63 @@ if (Reflect.hasField (object, "e")) {
 }
 ```
 
+## Square Brackets
+
+In ActionScript and Haxe, square brackets (`[]`) can be used to define an array literal:
+
+```haxe
+var colors = [ "red", "blue", "green" ];
+```
+
+Square brackets can also be used to access array values:
+
+```haxe
+var firstColor = colors[0];
+```
+
+Haxe allows support for array access on user-created abstract objects, in addition to core types.
+
+ActionScript also allows the use of square brackets to access fields using a string-based name, but this is not supported in Haxe. Use the `Reflect` class in Haxe in order to reference a field dynamically.
+
+_ActionScript 3.0_
+
+```ActionScript
+clip.x = 100;
+clip["y"] = 100;
+```
+
+_Haxe_
+
+```haxe
+clip.x = 100;
+Reflect.setField (clip, "y", 100);
+```
+
+## Angle Brackets
+
+ActionScript 3.0 uses angle brackets (`<>`) for the `Vector.<>`. Haxe provides support for _type parameters_ in the `Array<>`, `Map<>` and multiple other types in the language, and allows use of type parameters in user classes as well.
+
+When describing the type of an `Array`, ActionScript will always treat the array as if it is dynamic. In Haxe, arrays are typed based on their contents, which improves performance and can eliminate confusing errors:
+
+```haxe
+var values:Array<Int> = [ 0, 1, 2, 5 ];
+var names:Array<String> = [ "Doug", "Richard", "Harrison" ];
+```
+
+## Arrow Tokens
+
+Haxe supports a special arrow token (`->`) syntax, which is used when describing a function. The ActionScript does not allow for different types based on the signature of a function. Instead, every function in ActionScript is described as type `Function`. Haxe allows for `Dynamic` to describe any function, but uses "arrow tokens" when a function signature is described specifically. For example, a function that accepts a `Bool` and returns an `Int` would be described as `Bool->Int`, and a function that accepts two boolean arguments instead would be `Bool->Bool->Int`
+
+```haxe
+private function onMouseDown (x:Float, y:Float):Void {
+    
+}
+```
+```haxe
+var handler:Float->Float->Void = onMouseDown;
+handler (100, 100);
+```
+
 ## Keywords
 
 ActionScript and Haxe share many reserved words and keywords:
