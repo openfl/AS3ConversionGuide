@@ -5,6 +5,7 @@
     * [Overview](comparing-haxe-and-actionscript/overview.md)
     * [Syntax](comparing-haxe-and-actionscript/syntax.md)
     * [Variables](comparing-haxe-and-actionscript/variables.md)
+    * [Data Types](comparing-haxe-and-actionscript/data-types.md)
 * [Automatic Conversion](automatic-conversion/README.md)
     * [AS3HX](automatic-conversion/as3hx/README.md)
 * [Glossary](glossary/README.md)
