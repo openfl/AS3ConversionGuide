@@ -1,4 +1,4 @@
-# AS3 Conversion Guide
+# ActionScript 3.0 Conversion Guide
 
 This is a work-in-progress book about converting Actionscript code to Haxe for use with OpenFL.
 
