@@ -188,4 +188,142 @@ The Haxe programming language is designed to limit the number of keywords, so th
     public static inline var gravity = 9.8;
     ```
     
- * `do`
+ * `each`
+    
+    ActionScript has separate "for in" or "for each in" loops, but in Haxe these are simplified to a single "for in" loop.
+    
+    ```haxe
+    var fruits = [ "apple", "pear", "orange" ];
+
+    for (fruit in fruits) {
+        
+        trace (value);
+        
+    }
+    ```
+    
+    If you need to iterate over the names of the fields in an object, use `Reflect.fields`:
+    
+    ```haxe
+    var object = { a: "b", c: "d" };
+    
+    for (field in Reflect.fields (object)) {
+        
+        trace (field); // returns "a" then "c"
+        
+    }
+    ```haxe
+    
+ * `finally`
+    
+    Haxe does not support `try/catch/finally` so cleanup logic must occur in a `catch`
+
+ * `instanceof`
+    
+    The ActionScript 3.0 keyword, `instanceof`, can be replaced with `Std.is`
+    
+    ```haxe
+    trace (Std.is (sprite, DisplayObject));
+    trace (Std.is ("hello", String));
+    trace (Std.is (5, Int));
+    ```
+    
+ * `internal`
+    
+    Haxe has support for both `public` and `private` keywords, which are simpler to understand, and cover the majority of use cases.
+    
+    Haxe supports three meta-data tags (`@:allow`, `@:access` and `@:privateAccess`) which each provide different methods of accessing a `private` member. This can provide the same function as `internal`, or like "friend classes" in other languages.
+    
+    ```haxe
+    class Secret {
+        
+        private var password:String;
+        
+    }
+    ```
+    ```haxe
+    @:access(Secret)
+    class Login {
+        
+        public function new () {
+            
+            var password = Secret.password;
+            
+        }
+        
+    }
+    ```
+    
+ * `namespace`
+    
+    Haxe does not support custom namespaces like ActionScript 3.0.
+    
+ * `native`
+    
+    ActionScript has a `native` keyword when a method is a wrapper around a native method. Haxe has `extern` classes for working with native APIs, and depending on the platform, "CFFI" or "JNI" for accessing methods or properties between different runtime environments.
+    
+    On HTML5, it is possible to also implement `untyped` JavaScript code directly.
+    
+    ```haxe
+    untyped __js__ ("window.alert ('Hello!')");
+    ```
+    
+    ...extern classes tend to help provide a nicer API, however:
+    
+    ```haxe
+    Browser.alert ("Hello!");
+    ```
+    
+ * `protected`
+    
+    The `private` keyword in Haxe behaves similar to the `protected` keyword in ActionScript.
+    
+ * `typeof`
+    
+    ActionScript 3.0 uses the `typeof` keyword to return a generic String value for the current object:
+    
+    ```ActionScript
+    switch (typeof obj) {
+        case "boolean": trace ("obj is a boolean"); break;
+        case "number": trace ("obj is a number"); break;
+        default:
+    }
+    ```
+    
+    Haxe allows a similar check using `Type.typeof`, though it returns a static type (not a String).
+    
+    ```haxe
+    switch (Type.typeof (obj)) {
+        case TBool: trace ("obj is a boolean");
+        case TInt, TFloat: trace ("obj is a number");
+        default:
+    }
+    ```
+    
+ * `use`
+    
+    Haxe does not support custom namespaces like ActionScript 3.0.
+    
+ * `void`
+    
+    Haxe uses `Void` instead of `void` (for better consistency with other type names).
+    
+ * `with`
+    
+    The ActionScript 3.0 `with` keyword is a shorthand approach that can reduce the amount of code that is written, but it has some limitations (such as not being able to declare new variables inside) which can make it unpredictable to use.
+    
+    ```ActionScript
+    var clip = new MovieClip ();
+    with (clip) {
+        x = 100;
+        y = 100;
+    }
+    ```
+    
+    Haxe does not support the `with` keyword, it may make code more verbose, but it can make code simpler to understand and more reliable.
+    
+    ```haxe
+    var clip = new MovieClip ();
+    clip.x = 100;
+    clip.y = 100;
+    ```
