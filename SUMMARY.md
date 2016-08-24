@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [A Short History](history.md)
 * [Comparing Haxe and ActionScript](comparing-haxe-and-actionscript/README.md)
     * [Overview](comparing-haxe-and-actionscript/overview.md)
     * [Syntax](comparing-haxe-and-actionscript/syntax.md)
