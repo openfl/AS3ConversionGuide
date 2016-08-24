@@ -147,16 +147,17 @@ ActionScript and Haxe share many reserved words and keywords:
 |    |    |    |
 |----|----|----|
 | `break` | `case` | `catch` |
-| `class` | `default` | `do` |
-| `else` | `extends` | `false` |
-| `for` | `function` | `if` |
-| `implements` | `import` | `in` |
-| `interface` | `new` | `null` |
-| `override` | `package` | `private` |
-| `public` | `return` | `static` |
-| `super` | `switch` | `this` |
-| `throw` | `true` | `try` |
-| `var` | `while` |
+| `class` | `continue` | `default` |
+| `do` | `dynamic` | `else` |
+| `extends` | `false` | `for` |
+| `function` | `if` | `implements` |
+| `import` | `in` | `interface` |
+| `new` | `null` | `override` |
+| `package` | `private` | `public` |
+| `return` | `static` | `super` |
+| `switch` | `this` | `throw` |
+| `true` | `try` | `var` |
+| `while` |
 
 The Haxe programming language is designed to limit the number of keywords, so there are a number of keywords which are in ActionScript 3.0 that are not keywords in Haxe:
 
@@ -186,24 +187,6 @@ The Haxe programming language is designed to limit the number of keywords, so th
     
     ```haxe
     public static inline var gravity = 9.8;
-    ```
-    
- * `dynamic`
-    
-    ActionScript 3.0 supports a `dynamic` keyword when a class allows new fields at runtime.
-    
-    ```ActionScript
-    dynamic public class Test {
-        
-    }
-    ```
-    
-    Haxe allows for similar functionality by implementing the `Dynamic` type:
-    
-    ```haxe
-    class Test implements Dynamic {
-        
-    }
     ```
     
  * `each`
@@ -359,3 +342,9 @@ The Haxe programming language is designed to limit the number of keywords, so th
     clip.x = 100;
     clip.y = 100;
     ```
+    
+Haxe also has additional keywords that are not defined in ActionScript:
+
+|    |    |    |
+|----|----|----|
+| `cast` | `
