@@ -1,12 +1,16 @@
 # Error Messages
 
+The following are error messages that might occur when converting code from ActionScript 3.0 to Haxe. Especially if you are new to the Haxe programming language, it can be difficult to realize what is wrong.
+
+This is a short list of compile errors you may encounter, and some explanations for what may be the underlying issue.
+
 ## Class not found: Object
 
 The `Object` type in Haxe is called `Dynamic`. It is equivalent to the `*` type in ActionScript. It is also possible to remove some type declarations since Haxe supports type inference, like `var foo = {};`
 
 ## Class not found: Function
 
-The `Function` type in Haxe can be described either by using `Dynamic`, or by using the signature of the method. For example, if the method accepts no parameters and returns a string, you could describe the function as `Void -> String`. If it accepted a boolean and a string, but had no return value, you could use `Bool -> String -> Void` as the type.
+The `Function` type in Haxe can be described either by using `Dynamic`, or by using the signature of the method. For example, if the method accepts no parameters and returns a string, you could describe the function as `Void -> String`. If it accepted a boolean and a string, but had no return value, you could use `Bool->String->Void` as the type.
 
 It is also possible to remove some type declarations since Haxe supports type inference, like `var foo = function () {};`
 
