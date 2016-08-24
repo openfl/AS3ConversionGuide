@@ -6,7 +6,7 @@ Although we will be introducing new and powerful features of the Haxe programmin
 
 The [Haxe Manual](http://haxe.org/manual) is an excellent resource for understanding Haxe more deeply, particularly features that are not supported in ActionScript, such as `enum`, `typedef`, generics, type parameters, macros, abstracts... the list goes on.
 
-The Haxe language is not unlike a hardware store. If you need to hang a picture frame in your home, you will only scratch the surface of all the tools and supplies available, but this is alright. Translating from ActionScript to Haxe, I recommend that after you feel comfortable with Haxe, take a look at some of the features available, but do not feel obligation to begin using them all.
+The Haxe language is not unlike a hardware store. If you need to hang a picture frame in your home, you will only scratch the surface of all the tools and supplies available, but this is alright. Translating from ActionScript to Haxe, I recommend that after you feel comfortable with Haxe, take a look at some of the features available, but do not feel obligated to begin using them all.
 
 The board game "Othello" has this slogan, which is appropriate:
 
