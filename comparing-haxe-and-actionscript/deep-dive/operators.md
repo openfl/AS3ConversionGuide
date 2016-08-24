@@ -81,5 +81,23 @@ Haxe does not support logical assignment operators.
     
 ## Bitwise Logical Operators
 
+ActionScript 3.0 and Haxe share the following operators, and behave similarly:
+
+|    |    |    |
+|----|----|----|
+| `~` | `&` | `|` |
+| `^` | `&=` | `|=` |
+| `^=` |
+
+## Bitwise Shift Operators
+
+ActionScript 3.0 and Haxe share the following operators, and behave similarly:
+
+|    |    |    |
+|----|----|----|
+| `<<` | `>>` | `>>>` |
+| `<<=` | `>>=` | `>>>=` |
+
+## Other Operators
 
 
