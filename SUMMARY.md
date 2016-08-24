@@ -8,6 +8,7 @@
         * [Syntax](comparing-haxe-and-actionscript/deep-dive/syntax.md)
         * [Variables](comparing-haxe-and-actionscript/deep-dive/variables.md)
         * [Data Types](comparing-haxe-and-actionscript/deep-dive/data-types.md)
+        * [Operators](comparing-haxe-and-actionscript/deep-dive/operators.md)
 * [Automatic Conversion](automatic-conversion/README.md)
     * [AS3HX](automatic-conversion/as3hx/README.md)
 * [Glossary](glossary/README.md)
