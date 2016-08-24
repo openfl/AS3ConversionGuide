@@ -284,7 +284,7 @@ The Haxe programming language is designed to limit the number of keywords, so th
     
  * `finally`
     
-    Haxe does not support `try/catch/finally` so cleanup logic must occur in a `catch`, or the `try/catch` statement.
+    Haxe does not support `try/catch/finally` so cleanup logic must occur in a `catch`, or after the `try/catch` statement.
 
  * `include`
     
