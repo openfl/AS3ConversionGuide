@@ -93,7 +93,9 @@ Void
 
 Haxe expands upon the `get`/`set` functionality of ActionScript to provide nuanced property access support. For example, a read-only variable can be declared without a getter and an extra variable.
 
-When defining a getter or a setter function, Haxe requires the "get\_" or "set\_" prefix. This helps reflection work more easily, and ensures consisten behavior, even on environments that do not support getters and setters natively.
+When defining a getter or a setter function, Haxe requires the "get\_" or "set\_" prefix. This helps reflection work more easily, and ensures consistent behavior, even on environments that do not support getters and setters natively.
+
+Note in these examples how in Haxe you can generate a default getter or setter by using the `default` keyword in a property declaration. 
 
 ### ActionScript 3.0
 
@@ -219,7 +221,7 @@ var fruit = [ "apple", "orange" ];
 
 ## Loops
 
-ActionScript has multiple kinds of loops. There `for ... in` loops, `for ... each` loops and `for` loops. Haxe simplifies this syntax to a single `for ... in` loop:
+ActionScript has multiple kinds of loops. There are `for ... in` loops, `for ... each` loops and `for` loops. Haxe simplifies this syntax to a single `for ... in` loop. To iterate over keys instead of values, use `Reflect.fields` for anonymous objects, or `.keys()` for maps. Both ActionScript and Haxe support `while` loops. If your loop is not a simple iteration, you must use a `while` loop in Haxe. ActionScript loop variables are visible outside the loop, while Haxe loop variables are not. 
 
 ### ActionScript 3.0
 
@@ -237,6 +239,13 @@ for each (var value:String in array) {
     trace (value);
     
 }
+
+for (var j:int = 30; j>=0; j--) {
+    
+    trace (j--);
+    
+}
+trace("final j:"+j);
 ```
 
 ### Haxe
@@ -255,4 +264,14 @@ for (value in array) {
     trace (value);
     
 }
+
+var j:Int = 30;
+
+while (j >= 0) {
+    
+    trace(j--);
+    j--;
+    
+}
+trace ("final j:"+j );
 ```
