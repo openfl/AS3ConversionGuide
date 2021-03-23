@@ -112,7 +112,32 @@ The following operators are different between Haxe and ActionScript 3.0:
 
  * `as`
     
-    You should use `Std.as` instead.
+    You can convert `object as Type` to `Std.is(object, Type) ? cast(object, Type) : null` as a one-line replacement. However, there are usually more elegant ways to convert this code.
+    
+    If you know the type already, then you can use an unsafe cast:
+
+    ```haxe
+    var typedObject:Type = cast object;
+    ```
+
+    If you want a runtime error if the object is not of Type, then you can use an unsafe cast:
+    
+    ```haxe
+    var typedObject = cast(object, Type);
+    ```
+    
+    Lastly you can check the type of the object and return `null` in order to fully replicate the behavior of the `as` keyword from ActionScript 3.0:
+    
+    ```haxe
+    if (Std.is(object, Type))
+    {
+        typedObject = cast object;
+    }
+    else
+    {
+        typedObject = null;
+    }
+    ```
     
  * `delete`
     
