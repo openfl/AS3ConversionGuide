@@ -112,7 +112,7 @@ The following operators are different between Haxe and ActionScript 3.0:
 
  * `as`
     
-    You can convert `object as Type` to `Std.isOfType(object, Type) ? cast (object, Type) : null` or `(object is Type) ? cast (object, Type) : null`as a one-line replacement. However, there are usually more elegant ways to convert this code.
+    You can convert `object as Type` to `Std.isOfType(object, Type) ? cast (object, Type) : null` or `(object is Type) ? cast (object, Type) : null` as a one-line replacement. However, there are usually more elegant ways to convert this code.
     
     If you know the type already, then you can use an unsafe cast:
 
