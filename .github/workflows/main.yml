@@ -11,6 +11,6 @@ jobs:
           npx honkit build
       - uses: actions/upload-artifact@v3
         with:
-          name: openfl-developers-guide
+          name: openfl-as3-conversion-guide
           path: _book
           if-no-files-found: error
