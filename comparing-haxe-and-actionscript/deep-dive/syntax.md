@@ -292,12 +292,15 @@ The Haxe programming language is designed to limit the number of keywords, so th
     
  * `instanceof`
     
-    The ActionScript 3.0 keyword, `instanceof`, can be replaced with `Std.is`
+    The ActionScript 3.0 keyword, `instanceof`, can be replaced with `Std.isOfType` or the `is` keyword.
     
     ```haxe
-    trace (Std.is (sprite, DisplayObject));
-    trace (Std.is ("hello", String));
-    trace (Std.is (5, Int));
+    trace (Std.isOfType (sprite, DisplayObject));
+    trace (Std.isOfType ("hello", String));
+    trace (Std.isOfType (5, Int));
+    trace (sprite is DisplayObject);
+    trace ("hello" is String);
+    trace (5 is Int);
     ```
     
  * `internal`

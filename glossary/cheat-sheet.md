@@ -202,7 +202,7 @@ type = Class (getDefinitionByName (name);
 ### Haxe
 
 ```haxe
-if (Std.is (vehicle, Car)) {
+if (Std.isOfType (vehicle, Car)) { // or (vehicle is car)
  
 }
  
