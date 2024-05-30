@@ -240,7 +240,7 @@ The Haxe programming language is designed to limit the number of keywords, so th
 
  * `const`
     
-    Actionscript uses the `const` keyword to define a constant value. Because Haxe supports inlining, a `const` keyword is not necessary.
+    Actionscript uses the `const` keyword to define a constant value. Because Haxe supports inlining, a `const` keyword is not necessary. Haxe does not support instance constants, but you may make a read only property with the keyword `never`. Haxe does not support local constants. 
     
     ```haxe
     public static inline var gravity = 9.8;
