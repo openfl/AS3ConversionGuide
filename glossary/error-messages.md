@@ -124,7 +124,7 @@ This might mean that you forgot a parenthesis in your code.
 
 ## Unexpected is
 
-You can replace `Foo is Bar` with `Std.is (Foo, Bar)`
+This shouldn't be a problem in newer versions of Haxe, but if you're still using Haxe 3 you can replace `Foo is Bar` with `Std.is (Foo, Bar)`. It's advised to update Haxe, though.
 
 ## Unexpected as
 

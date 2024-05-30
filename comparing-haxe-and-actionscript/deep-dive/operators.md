@@ -112,7 +112,7 @@ The following operators are different between Haxe and ActionScript 3.0:
 
  * `as`
     
-    You can convert `object as Type` to `Std.is(object, Type) ? cast(object, Type) : null` as a one-line replacement. However, there are usually more elegant ways to convert this code.
+    You can convert `object as Type` to `Std.isOfType(object, Type) ? cast (object, Type) : null` or `(object is Type) ? cast (object, Type) : null` as a one-line replacement. However, there are usually more elegant ways to convert this code.
     
     If you know the type already, then you can use an unsafe cast:
 
@@ -129,7 +129,7 @@ The following operators are different between Haxe and ActionScript 3.0:
     Lastly you can check the type of the object and return `null` in order to fully replicate the behavior of the `as` keyword from ActionScript 3.0:
     
     ```haxe
-    if (Std.is(object, Type))
+    if (Std.isOfType(object, Type)) // or (object is Type)
     {
         typedObject = cast object;
     }
@@ -145,11 +145,11 @@ The following operators are different between Haxe and ActionScript 3.0:
     
  * `instanceof`
     
-    The `Std.is` method can be used in most cases where `instanceof` is used in ActionScript 3.0.
+    The `Std.isOfType` method or the `is` keyword can be used in most cases where `instanceof` is used in ActionScript 3.0.
     
  * `is`
     
-    Haxe provides `Std.is` rather than a special operator.
+    Prior to newer versions of Haxe, the `is` keyword did not work, and you had to use `Std.is`. It does work now, and it's worth noting `Std.is` has been deprecated in favor of `Std.isOfType`.
     
  * `::`
     
@@ -161,7 +161,7 @@ The following operators are different between Haxe and ActionScript 3.0:
     
  * `typeof`
     
-    Haxe provides a `Type.typeof` method that can be used to check the type, otherwise `Std.is` is common to determine if the object is of a certain type.
+    Haxe provides a `Type.typeof` method that can be used to check the type, otherwise `Std.isOfType` or the `is` keyword is common to determine if the object is of a certain type.
     
  * `void`
     
